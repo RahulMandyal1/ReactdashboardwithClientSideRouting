@@ -38,22 +38,29 @@ export default class Books extends Component {
 
   render() {
     return (
-        <div className="container">
-          <div className="search-box">
-            <input
-              type="text"
-              value={this.searchTerm}
-              onChange={this.handleSearch}
-              placeholder="search here"
-            />
-          </div>
-  
-          <div className="cards-container">
-            {this.filteredBooks().map((book) => {
-              return <h2 key={book.title}>{book.title}</h2>;
-            })}
-          </div>
+      <div className="container">
+        <div className="search-box">
+          <input
+            type="text"
+            value={this.searchTerm}
+            onChange={this.handleSearch}
+            placeholder="search here"
+          />
         </div>
-      );
+
+        <div className="cards-container book-container">
+          {this.filteredBooks().map((book) => {
+            return (
+              <div className="card">
+                <img src={book.image}  className="book-image"/>
+                <h2 className="book-title"> {book.title}</h2>
+                <p className="author-name">{book.author}</p>
+                <a href={book.website} className="buy-button">buy now</a>
+              </div>
+            );
+          })}
+        </div>
+      </div>
+    );
   }
 }

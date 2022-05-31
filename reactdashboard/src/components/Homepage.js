@@ -1,8 +1,7 @@
 import { Link } from "react-router-dom";
-import "./homepage.css";
 export default function Homepage() {
   return (
-    <div className="homepage-container">
+    <div className="container">
       <h2 className="heading">🚀 Welcome to Homepage!</h2>
       <div className="articles">
         <h2>

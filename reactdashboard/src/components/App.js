@@ -8,8 +8,12 @@ export default class App extends Component {
     return (
       <>
         <Header />
-        <Sidebar />
-        <Main />
+        <section className="main-section">
+          <Sidebar />
+          <main>
+            <Main />
+          </main>
+        </section>
       </>
     );
   }

@@ -1,24 +1,34 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 export default function Sidebar() {
   return (
     <aside>
       <nav className="sidebar-container">
         <ul>
           <li>
-            <Link to="/home">Home</Link>
+            <NavLink exact className="active" to="/">
+              Home
+            </NavLink>
           </li>
           <li>
-            <Link to="/articles">Articles</Link>
+            <NavLink exact className="active" to="/articles">
+              Articles
+            </NavLink>
           </li>
           <li>
-            <Link to="/peoples">People</Link>
+            <NavLink exact className="active" to="/peoples">
+              People
+            </NavLink>
           </li>
           <li>
-            <Link to="/books">Books</Link>
+            <NavLink exact className="active" to="/books">
+              Books
+            </NavLink>
           </li>
           <li>
-            <Link to="/help">Help & Support</Link>
+            <NavLink exact className="active" to="/help">
+              Help & Support
+            </NavLink>
           </li>
         </ul>
       </nav>

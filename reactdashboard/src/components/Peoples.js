@@ -54,7 +54,18 @@ export default class Peoples extends Component {
 
         <div className="cards-container">
           {this.filteredPeople().map((people) => {
-            return <h2 key={people.name}>{people.name}</h2>;
+            return (
+              <div className="card">
+                <div className="flex-row">
+                  <img src={people.image} className ="people-image" />
+                  <h2 className="people-name"> {people.name}</h2>
+                </div>
+                <p className="people-description">{people.description}</p>
+                <div className="center">
+                  <a href={people.wikiLink}>Learn more</a>
+                </div>
+              </div>
+            );
           })}
         </div>
       </div>
